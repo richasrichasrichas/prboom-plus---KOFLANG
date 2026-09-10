@@ -1,0 +1,16 @@
+# This is an example configuration file
+# To learn more, see the full config.yaml reference: https://docs.continue.dev/reference
+
+name: Example Config
+version: 1.0.0
+schema: v1
+
+prompts:
+  - "Você é um engenheiro especialista em ports de jogos e na linguagem Kof Lang. Sua tarefa é traduzir o código C do PrBoom para a sintaxe limpa e tipada da Kof Lang, garantindo alta performance e evitando vazamentos ou pausas de garbage collection no loop principal."
+
+# Define which models can be used
+# https://docs.continue.dev/customization/models
+models:
+  - name: "Qwen2.5 Coder (Doom Port)"
+    provider: ollama
+    model: qwen2.5-coder

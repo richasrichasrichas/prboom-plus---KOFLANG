@@ -1,0 +1,22 @@
+// classes.kf — Classes and Records in Kof (idiomatic forms)
+
+record Point(Int x, Int y)
+
+class User(String name, Int age) {
+    greet(): String {
+        return "Hello, " + name
+    }
+}
+
+main() {
+    var p = Point(10, 20)
+    println("Point: " + p.x() + ", " + p.y())
+
+    // idiomatic construction: no `new`, no manual field assignment
+    var u = User("Mel", 26)
+    println(u.greet())
+
+    // retrocompatible explicit form still works
+    var legacy = new User("Kof", 30)
+    println(legacy.greet())
+}
